@@ -1,0 +1,20 @@
+// Teste 1: Entrada correta (paridade correta)
+  entrada = 6'b101011; // 10101 (5 bits) + 1 (bit de paridade)
+  #10; // Aguardar 10 unidades de tempo
+  $display("Entrada: %b, Paridade Válida: %b", entrada, paridade_valida);
+
+  // Teste 2: Entrada incorreta (paridade errada)
+  entrada = 6'b101010; // 10101 (5 bits) + 0 (bit de paridade)
+  #10; 
+  $display("Entrada: %b, Paridade Válida: %b", entrada, paridade_valida);
+
+  // Teste 3: Outra entrada correta
+  entrada = 6'b110001; // 11000 (5 bits) + 1 (bit de paridade)
+  #10;
+  $display("Entrada: %b, Paridade Válida: %b", entrada, paridade_valida);
+
+  // Teste 4: Entrada fora do intervalo (erro de paridade)
+  entrada = 6'b111110; // 11111 (5 bits) + 0 (bit de paridade)
+  #10;
+  $display("Entrada: %b, Paridade Válida: %b", entrada, paridade_valida);
+  
